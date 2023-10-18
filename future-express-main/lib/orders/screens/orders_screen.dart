@@ -49,16 +49,48 @@ class _OrdersScreenState extends State<OrdersScreen> {
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(height: 5,),
-                                  Text(
-                                    "1097 Daju Ridge",
-                                    style: TextStyle(
-                                        color: Palette.greyColor, fontSize: 16),
+                                  SizedBox(
+                                    height: 5,
                                   ),
-                                  Text(
-                                    "1283 Cunema Extension",
-                                    style: TextStyle(
-                                        color: Palette.greyColor, fontSize: 16),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.all(5.0),
+                                        child: CircleAvatar(
+                                          radius: 5.0,
+                                          backgroundColor:Palette.greyColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "1097 Daju Ridge",
+                                        style: TextStyle(
+                                            color: Palette.greyColor,
+                                            fontSize: 16),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Row(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.all(5.0),
+                                        child: CircleAvatar(
+                                          radius: 5.0,
+                                          backgroundColor:Palette.primaryColor,
+                                        ),
+                                      ),
+                                      Text(
+                                        "1283 Cunema Extension",
+                                        style: TextStyle(
+                                            color: Palette.greyColor,
+                                            fontSize: 16),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 5,
                                   ),
                                   Text(
                                     "مطعم البيك",
@@ -80,93 +112,16 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       ],
                     ),
                     const Divider(),
-                    Row( mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Image.asset("assets/images/date.png" ),
-                        const Padding(
-                          padding:  EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
-                          child: Text(
-                            "16 oct 2023",
-                            style:
-                                TextStyle(color: Palette.greyColor, fontSize: 18),
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              ExpressCard(
-                padding: const EdgeInsets.only(
-                  top: 18,
-                  right: 12,
-                  left: 12,
-                  bottom: 8,
-                ),
-                child: Column(
-                  children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset('assets/images/icon.png'),
-                            const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "ابو فهد عبدالعزيز",
-                                    style: TextStyle(
-                                        color: Palette.blackColor,
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  SizedBox(height: 5,),
-                                  Text(
-                                    "1097 Daju Ridge",
-                                    style: TextStyle(
-                                        color: Palette.greyColor, fontSize: 16),
-                                  ),
-                                  Text(
-                                    "1283 Cunema Extension",
-                                    style: TextStyle(
-                                        color: Palette.greyColor, fontSize: 16),
-                                  ),
-                                  Text(
-                                    "مطعم البيك",
-                                    style: TextStyle(
-                                        color: Palette.greyColor, fontSize: 16),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        const Text(
-                          "15 ر.س",
-                          style: TextStyle(
-                              color: Palette.primaryColor,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    const Divider(),
-                    Row( mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Image.asset("assets/images/date.png" ),
+                        Image.asset("assets/images/date.png"),
                         const Padding(
-                          padding:  EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
+                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 0.0),
                           child: Text(
                             "16 oct 2023",
-                            style:
-                                TextStyle(color: Palette.greyColor, fontSize: 18),
+                            style: TextStyle(
+                                color: Palette.greyColor, fontSize: 18),
                           ),
                         ),
                       ],
@@ -174,7 +129,6 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   ],
                 ),
               ),
-             
             ],
           ),
         ));
