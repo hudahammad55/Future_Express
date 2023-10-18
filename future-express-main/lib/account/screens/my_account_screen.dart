@@ -3,6 +3,7 @@ import 'package:future_express/account/profile/screens/my_profile_screen.dart';
 import 'package:future_express/account/screens/notifications_screen.dart';
 import 'package:future_express/shared/utils/my_utils.dart';
 import 'package:future_express/shared/widgets/express_app_bar.dart';
+import 'package:future_express/wallet/screens/my_wallet_screen.dart';
 
 import '../widgets/account_list_tile.dart';
 
@@ -57,26 +58,30 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                     AccountListTile(
                       title: 'رصيدى',
                       icon: 'assets/icons/wallet.svg',
-                      onPressed: () {},
+                      onPressed: () {
+                        pushPage(context,const MyWalletScreen());
+                      },
                     ),
                     const Divider(
                       indent: 20,
                       endIndent: 20,
                     ),
-                    AccountListTile(
-                      title: 'التقييم',
-                      icon: 'assets/icons/star.svg',
-                      onPressed: () {},
-                    ),
-                    const Divider(
-                      indent: 20,
-                      endIndent: 20,
-                    ),
+                    // AccountListTile(
+                    //   title: 'التقييم',
+                    //   icon: 'assets/icons/star.svg',
+                    //   onPressed: () {
+                    //     pushPage(context, RatingScreen());
+                    //   },
+                    // ),
+                    // const Divider(
+                    //   indent: 20,
+                    //   endIndent: 20,
+                    // ),
                     AccountListTile(
                       title: 'تنبيهات',
                       icon: 'assets/icons/notification.svg',
                       onPressed: () {
-                        pushPage(context, NotificationScreen());
+                        pushPage(context,const NotificationScreen());
                       },
                     ),
                     const Divider(
