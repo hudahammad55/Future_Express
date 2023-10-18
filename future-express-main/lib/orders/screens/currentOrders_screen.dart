@@ -179,7 +179,7 @@ class _CurrentOrdersScreenState extends State<CurrentOrdersScreen> {
               ),
               ExpressButton(
                 onPressed: () => {},
-                child:const Text('تفاصيل'),
+                child: const Text('تفاصيل'),
               ),
             ],
           )
