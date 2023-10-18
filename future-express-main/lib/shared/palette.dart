@@ -4,6 +4,7 @@ class Palette {
   static const blackColor = Color(0xFF2C3E50);
   static const whiteColor = Colors.white;
   static const greyColor = Colors.grey;
+  static const primarygreyColor = Color(0xFFECEAEC);
   static const primaryColor = Color(0xFFB61919);
   static const primaryLightColor = Color(0xFFC75E5E);
   static const primaryGradient = LinearGradient(
