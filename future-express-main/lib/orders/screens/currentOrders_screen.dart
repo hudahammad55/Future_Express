@@ -131,15 +131,43 @@ class _CurrentOrdersScreenState extends State<CurrentOrdersScreen> {
                         SizedBox(
                           height: 5,
                         ),
-                        Text(
-                          "1097 Daju Ridge",
-                          style:
-                              TextStyle(color: Palette.greyColor, fontSize: 16),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(5.0),
+                              child: CircleAvatar(
+                                radius: 5.0,
+                                backgroundColor: Palette.greyColor,
+                              ),
+                            ),
+                            Text(
+                              "1097 Daju Ridge",
+                              style: TextStyle(
+                                  color: Palette.greyColor, fontSize: 16),
+                            ),
+                          ],
                         ),
-                        Text(
-                          "1283 Cunema Extension",
-                          style:
-                              TextStyle(color: Palette.greyColor, fontSize: 16),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(5.0),
+                              child: CircleAvatar(
+                                radius: 5.0,
+                                backgroundColor: Palette.primaryColor,
+                              ),
+                            ),
+                            Text(
+                              "1283 Cunema Extension",
+                              style: TextStyle(
+                                  color: Palette.greyColor, fontSize: 16),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
                         ),
                         Text(
                           "مطعم البيك",
@@ -217,13 +245,46 @@ class _CurrentOrdersScreenState extends State<CurrentOrdersScreen> {
                     SizedBox(
                       height: 5,
                     ),
-                    Text(
-                      "1097 Daju Ridge",
-                      style: TextStyle(color: Palette.greyColor, fontSize: 16),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: CircleAvatar(
+                            radius: 5.0,
+                            backgroundColor: Palette.greyColor,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "1097 Daju Ridge",
+                          style:
+                              TextStyle(color: Palette.greyColor, fontSize: 16),
+                        ),
+                      ],
                     ),
-                    Text(
-                      "1283 Cunema Extension",
-                      style: TextStyle(color: Palette.greyColor, fontSize: 16),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: CircleAvatar(
+                            radius: 5.0,
+                            backgroundColor: Palette.primaryColor,
+                          ),
+                        ),
+                        Text(
+                          "1283 Cunema Extension",
+                          style:
+                              TextStyle(color: Palette.greyColor, fontSize: 16),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
                     ),
                     Text(
                       "مطعم البيك",
