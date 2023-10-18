@@ -16,11 +16,6 @@ class CurrentOrdersScreen extends StatefulWidget {
 
 class _CurrentOrdersScreenState extends State<CurrentOrdersScreen> {
   bool selectedTap = false;
-  @override
-  void initState() {
-    super.initState();
-    bool selectedTap = false;
-  }
 
   @override
   Widget build(BuildContext context) {
