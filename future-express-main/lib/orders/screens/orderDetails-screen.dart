@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:future_express/shared/palette.dart';
 import 'package:future_express/shared/widgets/express_app_bar.dart';
+import 'package:future_express/shared/widgets/express_button.dart';
 import 'package:future_express/shared/widgets/express_card.dart';
 
 class OrderDetailsScreen extends StatefulWidget {
@@ -151,12 +152,15 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
               const SizedBox(
                 height: 10,
               ),
-              Container(
-                width: double.infinity,
-                child: const ExpressCard(
-                  child: Text(
-                    "تم الشراء",
-                    style: TextStyle(color: Palette.greyColor, fontSize: 18),
+              InkWell(
+                onTap: () => {_showBottomModal()},
+                child: Container(
+                  width: double.infinity,
+                  child: const ExpressCard(
+                    child: Text(
+                      "تم الشراء",
+                      style: TextStyle(color: Palette.greyColor, fontSize: 18),
+                    ),
                   ),
                 ),
               ),
@@ -166,5 +170,112 @@ class _OrderDetailsScreenState extends State<OrderDetailsScreen> {
             ]),
       ),
     );
+  }
+
+  _showBottomModal() {
+    return showModalBottomSheet(
+        context: context,
+        isScrollControlled: true,
+        backgroundColor: Colors.transparent,
+        builder: (builder) {
+          return Padding(
+            padding: const EdgeInsets.all(0.0),
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.30,
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: const Radius.circular(25.0),
+                    topRight: const Radius.circular(25.0),
+                  )),
+              child:  Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "العميل : ",
+                              style: TextStyle(
+                                  color: Palette.blackColor,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.start,
+                            ),
+                            Text(
+                              "ابوفهد عبدالعزيز",
+                              style: TextStyle(
+                                  color: Palette.greyColor, fontSize: 18),
+                            )
+                          ],
+                        ),
+                        Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: InkWell(onTap: ()=> {},
+                                child: Image.asset('assets/images/call.png' )),
+                            ),
+                            
+                            InkWell(onTap: ()=>{},
+                              child: Image.asset('assets/images/social.png' )),
+                          ],
+                        )
+                      ],
+                    ),
+                    // SizedBox(
+                    //   height: 12,
+                    // ),
+                    Row(
+                      children: [
+                        Text(
+                          "الحالة : ",
+                          style: TextStyle(
+                              color: Palette.blackColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.start,
+                        ),
+                        Text(
+                          "تم الشراء",
+                          style:
+                              TextStyle(color: Palette.greyColor, fontSize: 18),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "الاجمالى : ",
+                          style: TextStyle(
+                              color: Palette.blackColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.start,
+                        ),
+                        Text(
+                          "15 ريال سعودى",
+                          style:
+                              TextStyle(color: Palette.greyColor, fontSize: 18),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 12,
+                    ),
+                    ExpressButton(child: Text("تغيير حالة الطلب" , style: TextStyle(fontSize: 16),),)
+                  ],
+                ),
+              ),
+            ),
+          );
+        });
   }
 }
